@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h2> Welcome to Home Page </h1>
+            <div id="menubar">
+              <ul id="menu">
+                <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+                <li><a href="/login">Login</a></li>
+              </ul>
+            </div>
+    <h3>Registeration Form</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+    <input type="text" placeholder="username" name="num1"/>
+    <br>
+    <input type="text" placeholder="email" name="num2"/>
+    <br>
+    <input type="password" placeholder="password" name="num3"/>
+    <br>
+    <input type="submit" value="Submit" name="num4"/>
+</form>
+{% for message in messages %}
+        <h3>{{message}}</h3>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Welcome {{user}}</h3>
+    <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+      <h2>Addition of two numbers</h2>
+    <form action="/result/" method="post">
+        {% csrf_token %}
+    <input type="text" placeholder="data1" name="data1"/>
+    <br>
+    <input type="text" placeholder="data2" name="data2"/>
+    <br>
+    <input type="submit" value="Submit" name="res"/>
+</form>
+ <h3>{{output}}</h3>
+</body>
+</html>
